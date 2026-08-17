@@ -4,7 +4,7 @@ const projects = [
     desc: 'A full storefront experience — listings, cart and checkout — powered by dummy localStorage APIs to simulate a real commerce backend.',
     tools: ['React', 'LocalStorage', 'Checkout UI'],
     href: 'https://elume-nine.vercel.app/',
-    img:  'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1400&auto=format&fit=crop',
+    img:  '/elume_preview.png',
     alt:  'Elume e-commerce interface preview',
   },
   {
@@ -12,7 +12,7 @@ const projects = [
     desc: 'A Gemini-powered chat companion with a sharp, sarcastic personality — genuinely useful for real tasks while staying entertaining to talk to.',
     tools: ['React', 'Gemini API', 'Prompt Design'],
     href: 'https://aura-ai-lemon-zeta.vercel.app',
-    img:  'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=1400&auto=format&fit=crop',
+    img:  '/aura_ai_preview.png',
     alt:  'Aura AI chat agent preview',
   },
 ];
@@ -39,13 +39,13 @@ export default function Work() {
             style={{ gridTemplateColumns: p.reverse ? '.85fr 1.15fr' : '1.15fr .85fr' }}
           >
             <div className={`work-media relative rounded-[20px] overflow-hidden ${p.reverse ? 'order-2' : ''}`}>
-              <div className="work-mask aspect-[16/11] overflow-hidden rounded-[20px] border border-paper/12">
+              <div className="work-mask overflow-hidden rounded-[20px] border border-paper/12 bg-black/20">
                 <img
                   src={p.img}
                   alt={p.alt}
                   loading="lazy"
-                  className="work-img w-full h-full object-cover scale-[1.08] transition-[transform,filter] duration-1000"
-                  style={{ filter: 'grayscale(.4) brightness(.82)' }}
+                  className="work-img w-full h-auto transition-[transform,filter] duration-1000 origin-center"
+                  style={{ filter: 'grayscale(.2) brightness(.9)' }}
                 />
               </div>
             </div>

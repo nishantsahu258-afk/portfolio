@@ -1,4 +1,4 @@
-const skills = ['React','·','TypeScript','·','Next.js','·','Tailwind CSS','·','Framer Motion','·','GSAP','·','REST / API Integration','·','Node.js','·'];
+const skills = ['HTML', '·', 'CSS', '·', 'JavaScript', '·', 'React', '·', 'Tailwind CSS', '·', 'React Router', '·', 'REST APIs', '·', 'Context API', '·', 'Local Storage', '·', 'Git', '·', 'GitHub', '·', 'npm', '·', 'Vite', '·', 'Vercel', '·'];
 
 export default function Marquee() {
   return (

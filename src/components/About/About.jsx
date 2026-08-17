@@ -27,13 +27,13 @@ export default function About() {
         <div>
           <p className="about__intro mb-9">
             <span className="line-mask">
-              <span className="line-inner font-display font-[460] leading-[1.18] tracking-[-0.01em]" style={{ fontSize: 'clamp(28px,3.4vw,44px)' }}>
-                I build the kind of interfaces
+              <span className="line-inner font-display font-[460] leading-[1.18] tracking-[-0.01em] text-paper" style={{ fontSize: 'clamp(36px,4.5vw,56px)' }}>
+                I build <span className="text-teal">interfaces</span>
               </span>
             </span>
             <span className="line-mask">
-              <span className="line-inner font-display font-[460] leading-[1.18] tracking-[-0.01em]" style={{ fontSize: 'clamp(28px,3.4vw,44px)' }}>
-                that don't need explaining.
+              <span className="line-inner font-display font-[460] leading-[1.18] tracking-[-0.01em] text-paper" style={{ fontSize: 'clamp(36px,4.5vw,56px)' }}>
+                that feel effortless.
               </span>
             </span>
           </p>
@@ -43,24 +43,28 @@ export default function About() {
             className="about__text leading-[1.7] max-w-[56ch] text-paper/62"
             style={{ fontSize: 'clamp(16px,1.3vw,18px)' }}
           >
-            I'm Nishant — a frontend developer who spent the last stretch going deep on React:
-            component architecture, state management, animation, and the small interaction details
-            most people skip. Instead of stopping at tutorials, I built two full products end‑to‑end,
-            to prove the fundamentals actually hold up under a real build.
+            Bachelor of Computer Applications student and frontend developer focused on React, modern web technologies, and building products that solve real problems—not just tutorial projects.
           </p>
 
-          <dl className="about-meta grid gap-6 mt-[52px] pt-7 border-t border-paper/12" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
+          <div className="about-meta grid gap-x-6 gap-y-10 mt-[52px] pt-7 border-t border-paper/12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
             {[
-              { dt: 'Focus',    dd: 'React · JavaScript · UI Design' },
-              { dt: 'Shipped',  dd: <><span data-count-to="2">0</span> independent products</> },
-              { dt: 'Based in', dd: 'Durg, India' },
-            ].map(({ dt, dd }) => (
-              <div key={dt} className="about-meta-item">
-                <dt className="font-mono text-[11px] uppercase tracking-[.1em] text-paper/34 mb-2">{dt}</dt>
-                <dd className="font-display text-[17px] text-paper">{dd}</dd>
+              { num: '01', icon: '</>', title: 'Understand', desc: 'Break down problems and understand what really matters.' },
+              { num: '02', icon: '◫', title: 'Structure',  desc: 'Plan components, state, and data flow with purpose.' },
+              { num: '03', icon: '🚀', title: 'Build',      desc: 'Build clean, responsive interfaces that work seamlessly.' },
+              { num: '04', icon: '✨', title: 'Polish',     desc: 'Refine every detail for a smooth and meaningful experience.' },
+            ].map(({ num, icon, title, desc }) => (
+              <div key={num} className="about-meta-item flex flex-col group">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="font-mono text-[11px] text-teal">{num}</span>
+                  <div className="w-8 h-8 rounded-lg border border-paper/10 flex items-center justify-center text-[13px] text-paper/80 group-hover:border-teal/40 group-hover:text-teal transition-colors duration-300">
+                    {icon}
+                  </div>
+                </div>
+                <strong className="font-body font-[500] text-[15px] text-paper mb-2">{title}</strong>
+                <p className="font-body text-[13px] text-paper/62 leading-[1.6]">{desc}</p>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </section>

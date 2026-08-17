@@ -5,9 +5,8 @@ import RippleCanvas from '../RippleCanvas/RippleCanvas';
 const TITLES = [
   { lines: ["Nishant", "Sahu"], className: "font-['Playfair_Display'] italic tracking-tight text-[1.2em]" },
   { lines: ["Frontend", "Developer"], className: "font-['Oswald'] uppercase tracking-normal text-[1em]" },
-  { lines: ["UI/UX", "Designer"], className: "font-['VT323'] tracking-widest lowercase text-[1.45em] leading-[0.75]" },
-  { lines: ["React", "Developer"], className: "font-['Dancing_Script'] tracking-normal lowercase text-[1.6em] leading-[0.8]" },
-  { lines: ["CREATIVE", "DESIGNER"], className: "font-['Monoton'] uppercase tracking-normal text-[0.85em] leading-[1.1]" }
+  { lines: ["React", "Designer"], className: "font-['VT323'] tracking-widest lowercase text-[1.45em] leading-[0.75]" },
+  { lines: ["Interface", "DESIGNER"], className: "font-['Monoton'] uppercase tracking-normal text-[0.85em] leading-[1.1]" }
 ];
 
 export default function Hero({ gsapReady }) {
@@ -93,11 +92,11 @@ export default function Hero({ gsapReady }) {
       />
 
       <div className="hero-rows relative z-[2] flex items-end justify-between px-[var(--edge)] pt-[140px] sm:pt-[110px] font-mono text-[11px] sm:text-[12.5px] text-paper/62 gap-2">
-        <p className="flex items-center gap-[6px] sm:gap-[10px] tracking-[.05em] shrink-0">
-          <span className="w-[5px] h-[5px] sm:w-[7px] sm:h-[7px] rounded-full bg-teal shadow-[0_0_0_4px_rgba(55,214,196,.18)]" />
-          <span className="whitespace-nowrap">Frontend Developer</span>
-          <span className="hidden sm:inline"> — React / JavaScript</span>
-        </p>
+        <div className="idx-head flex items-center gap-4 sm:gap-5">
+          <span className="idx-num font-mono text-[13px] text-teal tracking-[.06em] shrink-0">00</span>
+          <span className="idx-rule w-[40px] sm:w-[60px] h-px bg-paper/12 shrink-0" />
+          <span className="idx-label font-mono text-[12.5px] tracking-[.14em] uppercase text-paper/62 shrink-0">Hero</span>
+        </div>
         <p className="shrink-0 text-right whitespace-nowrap">Available for work<br className="sm:hidden" /> <span className="hidden sm:inline">·</span> IN <span ref={timeRef} id="localTime">--:--</span></p>
       </div>
 
@@ -124,7 +123,7 @@ export default function Hero({ gsapReady }) {
 
       <div className="hero-rows relative z-[2] flex items-end justify-between px-[var(--edge)] pb-[80px] sm:pb-[46px] font-mono text-[11px] sm:text-[12.5px] text-paper/62 gap-4">
         <p className="max-w-[280px] sm:max-w-[340px] font-body text-[13px] sm:text-[14.5px] text-paper/62 leading-[1.55]">
-          I craft responsive web experiences where thoughtful UI meets solid React and JavaScript engineering.
+         Building modern web applications with React, JavaScript, and a strong focus on clean user experiences.
         </p>
         <div className="flex flex-col items-center gap-[10px] uppercase tracking-[.14em] text-paper/62 shrink-0" data-hover>
           <span>Scroll</span>

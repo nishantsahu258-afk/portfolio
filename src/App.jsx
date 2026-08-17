@@ -9,8 +9,6 @@ import About       from './components/About/About';
 import Work        from './components/Work/Work';
 import Background  from './components/Background/Background';
 import Contact     from './components/Contact/Contact';
-import Footer      from './components/Footer/Footer';
-
 // Import our separated JS logic
 import { initPreloader, initCursor, initNav, initAnimations } from './js/main.js';
 
@@ -60,8 +58,6 @@ export default function App() {
         <Background />
         <Contact />
       </main>
-
-      <Footer />
     </>
   );
 }

@@ -76,8 +76,14 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
 .cursor.is-invert .cursor__ring { mix-blend-mode: difference; }
 
 /* ── Nav JS states ───────────────────────────────────── */
-.nav.is-scrolled { background: rgba(10,13,16,.78); backdrop-filter: blur(10px); border-color: rgba(243,241,234,.12); }
-.nav.is-hidden   { transform: translateY(-110%); }
+.nav { transform: scale(1); transform-origin: top center; }
+.nav.is-scrolled { 
+  background: rgba(10,13,16,.85); 
+  backdrop-filter: blur(16px); 
+  border-color: rgba(55,214,196,.2); 
+  transform: scale(0.95);
+  box-shadow: 0 12px 40px rgba(55,214,196,.08);
+}
 
 /* Nav link underline pseudo-element */
 .nav-link { position: relative; }
@@ -107,6 +113,9 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
 /* ── Keyframe animations ─────────────────────────────── */
 @keyframes scrollLine { 0% { transform: translateY(-100%); } 100% { transform: translateY(160%); } }
 @keyframes marquee    { from { transform: translateX(0);    } to   { transform: translateX(-50%); } }
+@keyframes shineSweep { 0% { left: -100%; } 100% { left: 200%; } }
+
+.shine-sweep { animation: shineSweep 4s ease-in-out infinite; }
 
 /* Marquee nth-child teal dots */
 .marquee-track span:nth-child(odd) { color: #37D6C4; }
@@ -121,7 +130,7 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
 .contact__title .letter   { display: inline-block; transition: transform .25s var(--ease), color .25s; will-change: transform; }
 
 /* ── Work row: parent hover → child ─────────────────── */
-.work-row:hover .work-img  { transform: scale(1);  filter: grayscale(0) brightness(1); }
+.work-row:hover .work-img  { transform: scale(1.03);  filter: grayscale(0) brightness(1) !important; }
 .work-row:hover .work-link { color: #37D6C4; border-color: #37D6C4; }
 
 /* ── Preloader done ─────────────────────────────────── */
@@ -129,8 +138,6 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
 
 /* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 900px) {
-  .nav-desktop, .nav-contact { display: none; }
-  .nav-burger  { display: flex !important; }
   .side-nav    { display: none; }
   .about-grid  { grid-template-columns: 1fr !important; }
   .about-portrait { position: static !important; }

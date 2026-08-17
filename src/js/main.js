@@ -100,8 +100,6 @@ export function initNav() {
   const onScroll = () => {
     const y = window.scrollY;
     nav.classList.toggle('is-scrolled', y > 40);
-    if (y > lastScroll && y > 200) nav.classList.add('is-hidden');
-    else nav.classList.remove('is-hidden');
     lastScroll = y;
   };
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -131,7 +129,7 @@ export function initNav() {
         links.forEach((l) => l.classList.remove('is-active'));
         links[idx].classList.add('is-active');
       });
-    }, { threshold: 0.5 });
+    }, { rootMargin: '-45% 0px -45% 0px' });
     targets.forEach((t) => t && io.observe(t));
   }
 
@@ -187,18 +185,19 @@ export function initAnimations() {
     });
   }
 
-  // Count up
-  const countEl = document.querySelector('[data-count-to]');
-  if (countEl) {
-    const target = parseFloat(countEl.getAttribute('data-count-to'));
+  // Stats Counters
+  document.querySelectorAll('[data-count-to], [data-stat-target]').forEach(counter => {
+    const targetVal = counter.getAttribute('data-count-to') || counter.getAttribute('data-stat-target');
+    if (!targetVal) return;
+    const target = parseFloat(targetVal);
     const obj = { val: 0 };
     gsap.to(obj, {
-      val: target, duration: 1.1, ease: 'power2.out',
-      scrollTrigger: { trigger: countEl, start: 'top 92%', once: true },
-      onUpdate: () => { countEl.textContent = Math.floor(obj.val); },
-      onComplete: () => { countEl.textContent = target; }
+      val: target, duration: 1.5, ease: 'power2.out',
+      scrollTrigger: { trigger: counter, start: 'top 92%', once: true },
+      onUpdate: () => { counter.textContent = Math.floor(obj.val); },
+      onComplete: () => { counter.textContent = target; }
     });
-  }
+  });
 
   // About meta items
   gsap.fromTo(document.querySelectorAll('.about-meta-item'), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.1, ease: 'power3.out', scrollTrigger: { trigger: '.about-meta-item', start: 'top 90%' } });
@@ -211,10 +210,59 @@ export function initAnimations() {
     gsap.fromTo(meta, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.06, ease: 'power3.out', scrollTrigger: { trigger: row, start: 'top 78%' } });
   });
 
-  // Ledgers
-  document.querySelectorAll('.ledger').forEach(ledger => {
-    gsap.fromTo(ledger.querySelectorAll('.ledger__row'), { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: ledger, start: 'top 85%' } });
+  // Background Timeline
+  const tlProgress = document.querySelector('.timeline-progress');
+  if (tlProgress) {
+    gsap.to(tlProgress, {
+      height: '100%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#background',
+        start: 'top 50%',
+        end: 'bottom 80%',
+        scrub: 0.5
+      }
+    });
+  }
+
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    gsap.to(item, {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: item,
+        start: 'top 85%'
+      }
+    });
+
+    const nodeInner = item.querySelector('.timeline-node-inner');
+    const nodeOuter = item.querySelector('.timeline-node');
+    if (nodeInner && nodeOuter) {
+      gsap.to(nodeInner, {
+        backgroundColor: '#37D6C4',
+        scale: 1.2,
+        duration: 0.4,
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 60%',
+          onEnter: () => nodeOuter.style.borderColor = 'rgba(55,214,196,0.5)',
+          onLeaveBack: () => {
+            nodeOuter.style.borderColor = 'rgba(255,255,255,0.1)';
+            gsap.to(nodeInner, { backgroundColor: 'rgba(243,241,234,0.2)', scale: 1, duration: 0.4 });
+          }
+        }
+      });
+    }
   });
+
+  // Background Bottom Cards
+  gsap.fromTo(['.edu-card', '.cert-card'], 
+    { opacity: 0, y: 40, filter: 'blur(4px)' }, 
+    { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1, stagger: 0.2, ease: 'power3.out', scrollTrigger: { trigger: '.edu-card', start: 'top 85%' } }
+  );
 
   // Contact
   gsap.fromTo('.contact__title', { opacity: 0 }, { opacity: 1, duration: 0.6, ease: 'power2.out', scrollTrigger: { trigger: '.contact__title', start: 'top 85%' } });
