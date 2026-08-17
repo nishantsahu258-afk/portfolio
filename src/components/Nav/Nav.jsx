@@ -26,7 +26,7 @@ export default function Nav() {
           onClick={(e) => { e.preventDefault(); scrollTo('top'); }}
           aria-label="Home"
         >
-          <svg width="34" height="29" viewBox="0 0 28 24" fill="none" className="text-paper">
+          <svg width="44" height="38" viewBox="0 0 28 24" fill="none" className="text-paper">
             <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M 6 16 V 8 L 11 16 V 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M 18 8 H 13 V 12 H 18 V 16 H 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
