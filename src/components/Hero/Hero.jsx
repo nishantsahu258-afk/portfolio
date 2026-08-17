@@ -92,18 +92,18 @@ export default function Hero({ gsapReady }) {
         }}
       />
 
-      <div className="hero-rows relative z-[2] flex items-end justify-between px-[var(--edge)] pt-[110px] font-mono text-[12.5px] text-paper/62">
-        <p className="flex items-center gap-[10px] tracking-[.05em]">
-          <span className="w-[7px] h-[7px] rounded-full bg-teal shadow-[0_0_0_4px_rgba(55,214,196,.18)]" />
-          Frontend Developer — React / JavaScript
+      <div className="hero-rows relative z-[2] flex items-end justify-between px-[var(--edge)] pt-[140px] sm:pt-[110px] font-mono text-[11px] sm:text-[12.5px] text-paper/62 gap-2">
+        <p className="flex items-center gap-[6px] sm:gap-[10px] tracking-[.05em] shrink-0">
+          <span className="w-[5px] h-[5px] sm:w-[7px] sm:h-[7px] rounded-full bg-teal shadow-[0_0_0_4px_rgba(55,214,196,.18)]" />
+          <span className="whitespace-nowrap">Frontend Developer</span>
+          <span className="hidden sm:inline"> — React / JavaScript</span>
         </p>
-        <p>Available for work · IN <span ref={timeRef} id="localTime">--:--</span></p>
+        <p className="shrink-0 text-right whitespace-nowrap">Available for work<br className="sm:hidden" /> <span className="hidden sm:inline">·</span> IN <span ref={timeRef} id="localTime">--:--</span></p>
       </div>
 
       <div className="hero-title relative z-[2] w-full flex-1 flex items-center justify-center">
         <h1
-          className="relative text-center px-[var(--edge)] font-display font-[520] leading-[.92] tracking-[-0.02em] w-full"
-          style={{ fontSize: 'clamp(64px, 15vw, 210px)' }}
+          className="relative text-center px-[var(--edge)] font-display font-[520] leading-[.92] tracking-[-0.02em] w-full text-[clamp(46px,14.5vw,210px)] md:text-[clamp(64px,15vw,210px)]"
         >
           {/* Dummy element to preserve exact height of the 2 lines based on Frontend Developer */}
           <div className="invisible pointer-events-none flex flex-col items-center w-full font-['Oswald'] uppercase text-[1em]">
@@ -122,13 +122,13 @@ export default function Hero({ gsapReady }) {
         </h1>
       </div>
 
-      <div className="hero-rows relative z-[2] flex items-end justify-between px-[var(--edge)] pb-[46px] font-mono text-[12.5px] text-paper/62">
-        <p className="max-w-[340px] font-body text-[14.5px] text-paper/62 leading-[1.55]">
+      <div className="hero-rows relative z-[2] flex items-end justify-between px-[var(--edge)] pb-[80px] sm:pb-[46px] font-mono text-[11px] sm:text-[12.5px] text-paper/62 gap-4">
+        <p className="max-w-[280px] sm:max-w-[340px] font-body text-[13px] sm:text-[14.5px] text-paper/62 leading-[1.55]">
           I craft responsive web experiences where thoughtful UI meets solid React and JavaScript engineering.
         </p>
-        <div className="flex flex-col items-center gap-[10px] uppercase tracking-[.14em] text-paper/62" data-hover>
+        <div className="flex flex-col items-center gap-[10px] uppercase tracking-[.14em] text-paper/62 shrink-0" data-hover>
           <span>Scroll</span>
-          <div className="w-px h-[54px] bg-paper/12 overflow-hidden">
+          <div className="w-px h-[40px] sm:h-[54px] bg-paper/12 overflow-hidden">
             <i className="block w-full h-[22px] bg-teal not-italic" style={{ animation: 'scrollLine 1.8s ease-in-out infinite' }} />
           </div>
         </div>

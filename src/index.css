@@ -133,17 +133,15 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
   .nav-burger  { display: flex !important; }
   .side-nav    { display: none; }
   .about-grid  { grid-template-columns: 1fr !important; }
-  .about-portrait { position: static !important; max-width: 280px; }
+  .about-portrait { position: static !important; }
   .about-meta  { grid-template-columns: 1fr 1fr !important; }
   .work-row, .work-row-reverse { grid-template-columns: 1fr !important; }
   .work-row-reverse .work-media { order: initial !important; }
   .work-row-reverse .work-meta  { order: initial !important; }
   .bg-split    { grid-template-columns: 1fr !important; gap: 56px !important; }
-  .hero-rows   { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
 }
 @media (max-width: 560px) {
-  .hero-title { font-size: clamp(54px, 20vw, 110px) !important; }
-  section     { padding: 90px var(--edge) !important; }
+  section:not(#hero) { padding: 90px var(--edge) !important; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
