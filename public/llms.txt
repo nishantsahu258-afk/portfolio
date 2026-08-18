@@ -1,0 +1,18 @@
+# Nishant Sahu - Frontend Developer
+
+> Nishant Sahu is a passionate Frontend Developer focused on React, modern web technologies, and building products that solve real problems.
+
+## Summary
+- **Role**: Frontend Developer
+- **Tech Stack**: HTML, CSS, JavaScript, React, Tailwind CSS, GSAP, React Router, Vite.
+- **Background**: Bachelor of Computer Applications student from Durg, IN. 
+- **Certifications**: Oracle Agentic AI Foundations Associate (August 2026).
+
+## Projects
+- **Elume**: A responsive e-commerce web application with product listings, cart, and local storage integration.
+- **Aura AI**: A Gemini-powered AI chatbot with custom prompt engineering and sarcastic personality.
+
+## Contact Links
+- **GitHub**: https://github.com/nishantsahu258-afk
+- **LinkedIn**: https://www.linkedin.com/in/nishant-sahu-9183693b5
+- **Email**: nisansahu258@gmail.com
