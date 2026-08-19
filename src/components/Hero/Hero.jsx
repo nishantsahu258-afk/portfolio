@@ -5,7 +5,7 @@ import RippleCanvas from '../RippleCanvas/RippleCanvas';
 const TITLES = [
   { lines: ["Nishant", "Sahu"], className: "font-['Playfair_Display'] italic tracking-tight text-[1.2em]" },
   { lines: ["Frontend", "Developer"], className: "font-['Oswald'] uppercase tracking-normal text-[1em]" },
-  { lines: ["React", "Designer"], className: "font-['VT323'] tracking-widest lowercase text-[1.45em] leading-[0.75]" },
+  { lines: ["React", "Developer"], className: "font-['VT323'] tracking-widest lowercase text-[1.45em] leading-[0.75]" },
   { lines: ["Interface", "DESIGNER"], className: "font-['Monoton'] uppercase tracking-normal text-[0.85em] leading-[1.1]" }
 ];
 

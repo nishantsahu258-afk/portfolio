@@ -43,6 +43,15 @@ export default function Nav() {
               {label}
             </a>
           ))}
+          <a
+            href="/Nishant_Sahu_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link text-paper/62 hover:text-paper transition-colors duration-[250ms]"
+            data-hover
+          >
+            Resume
+          </a>
         </nav>
 
         <a
