@@ -9,7 +9,7 @@ const timeline = [
   {
     year: '2025',
     title: 'Academic Foundation',
-    subtitle: 'Started Bachelor of Computer Applications at Shri Shankaracharya Professional University, Bhilai, Chhattisgarh.',
+    subtitle: "Started Bachelor's Degree in Computer Applications at Shri Shankaracharya Professional University, Bhilai, Chhattisgarh.",
     icon: '🎓'
   },
   {
@@ -185,7 +185,7 @@ export default function Background() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 14l9-5-9-5-9 5 9 5z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
             Education
           </div>
-          <h3 className="font-display text-[24px] font-[500] text-paper mb-2 leading-[1.2]">Bachelor of Computer Applications</h3>
+          <h3 className="font-display text-[24px] font-[500] text-paper mb-2 leading-[1.2]">Bachelor's Degree in Computer Applications</h3>
           <p className="font-body text-[14px] text-paper/60 mb-8">Shri Shankaracharya Professional University<br/>Bhilai, Chhattisgarh</p>
           
           <div className="flex flex-wrap gap-3 mb-8">
@@ -198,7 +198,7 @@ export default function Background() {
           </div>
 
           <p className="font-body text-[14px] text-paper/50 leading-[1.6] mt-auto border-t border-white/5 pt-6 group-hover:text-paper/70 transition-colors">
-            Pursuing a Bachelor of Computer Applications while actively building real-world frontend applications, exploring modern web technologies, and developing practical problem-solving skills through project-based learning.
+            Pursuing a Bachelor's Degree in Computer Applications while actively building real-world frontend applications, exploring modern web technologies, and developing practical problem-solving skills through project-based learning.
           </p>
         </div>
 

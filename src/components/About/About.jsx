@@ -34,7 +34,7 @@ export default function About() {
           </p>
 
           <p id="aboutText" className="about__text leading-[1.7] max-w-[56ch] text-paper/62" style={{ fontSize: 'clamp(16px,1.3vw,18px)' }}>
-            I’m a Bachelor of Computer Applications student at Shri Shankaracharya Professional University who learns by building. I work across React interfaces, API integration, and Node.js/Express backends, with hands-on projects including an AI chat application, an e-commerce experience, and a business analytics dashboard. I care about clean components, thoughtful UX, reliable data flow, and continuously improving through real projects.
+            I’m a Bachelor's Degree in Computer Applications student at Shri Shankaracharya Professional University who learns by building. I work across React interfaces, API integration, and Node.js/Express backends, with hands-on projects including an AI chat application, an e-commerce experience, and a business analytics dashboard. I care about clean components, thoughtful UX, reliable data flow, and continuously improving through real projects.
           </p>
 
           <div className="about-meta grid gap-x-6 gap-y-10 mt-[52px] pt-7 border-t border-paper/12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
