@@ -13,18 +13,6 @@ const projects = [
   },
   {
     num: '02',
-    name: 'Business Analytics Dashboard',
-    tag: 'Dashboard · Data Visualization',
-    reverse: true,
-    desc: 'An interactive admin dashboard for tracking leads, quotations, deals, orders, and revenue. KPI cards, charts, filters, and structured data views help make business performance easier to scan.',
-    tools: ['React', 'JavaScript', 'Charts', 'Dashboard UI', 'Vercel'],
-    href: 'https://business-performance-revenue-analyt-tawny.vercel.app/',
-    repo: 'https://github.com/nishantsahu258-afk/business-performance-revenue-analytics-dashboard',
-    visual: true,
-    alt: 'Illustrative preview of the business performance analytics dashboard',
-  },
-  {
-    num: '03',
     name: 'ELUME',
     tag: 'E-commerce Experience',
     reverse: false,
@@ -36,59 +24,6 @@ const projects = [
     alt: 'ELUME e-commerce interface preview',
   },
 ];
-
-function DashboardPreview() {
-  return (
-    <div className="aspect-[16/10] w-full bg-[#0d1418] p-4 sm:p-6 text-left">
-      <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-4">
-        <div>
-          <p className="font-mono text-[10px] uppercase tracking-[.12em] text-teal">Business overview</p>
-          <p className="font-display text-xl sm:text-2xl text-paper mt-1">Revenue dashboard</p>
-        </div>
-        <span className="rounded-full border border-teal/30 px-3 py-1 font-mono text-[10px] text-teal">Analytics</span>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mt-4">
-        {[
-          ['Leads', '1,248'],
-          ['Quotations', '384'],
-          ['Orders', '216'],
-          ['Revenue', '₹8.4L'],
-        ].map(([label, value]) => (
-          <div key={label} className="rounded-lg border border-white/10 bg-white/[.03] p-3">
-            <p className="font-mono text-[9px] sm:text-[10px] text-paper/45">{label}</p>
-            <p className="font-display text-lg sm:text-2xl text-paper mt-2">{value}</p>
-          </div>
-        ))}
-      </div>
-      <div className="grid grid-cols-[1.3fr_.7fr] gap-3 mt-3">
-        <div className="rounded-lg border border-white/10 bg-white/[.025] p-3">
-          <p className="font-mono text-[10px] text-paper/50 mb-4">Revenue trend</p>
-          <div className="flex items-end gap-2 h-20 sm:h-28">
-            {[38, 55, 45, 73, 62, 88, 70, 96, 76, 100, 83, 112].map((height, i) => (
-              <span key={i} className="flex-1 rounded-t-sm bg-teal/70" style={{ height: `${height / 1.15}%` }} />
-            ))}
-          </div>
-        </div>
-        <div className="rounded-lg border border-white/10 bg-white/[.025] p-3">
-          <p className="font-mono text-[10px] text-paper/50 mb-3">Pipeline</p>
-          <div className="space-y-3">
-            {[
-              ['Leads', '80%'],
-              ['Deals', '58%'],
-              ['Orders', '36%'],
-            ].map(([label, width]) => (
-              <div key={label}>
-                <div className="flex justify-between font-mono text-[9px] text-paper/50 mb-1"><span>{label}</span><span>{width}</span></div>
-                <div className="h-1.5 bg-white/10 rounded-full overflow-hidden"><div className="h-full bg-teal rounded-full" style={{ width }} /></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <p className="font-mono text-[9px] sm:text-[10px] text-paper/30 mt-3">Illustrative preview · open the live project to explore</p>
-    </div>
-  );
-}
 
 export default function Work() {
   return (
